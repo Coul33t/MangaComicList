@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MangaComicList</string>
+    <string name="manga_and_comics_list">Manga and Comics List</string>
+    <string name="random">Random</string>
+    <string name="count">Count</string>
+    <string name="toast">Toast</string>
+    <string name="num_0_val">Here is a random number between 0 and %1d</string>
+    <string name="number">N U M B E R</string>
+</resources>

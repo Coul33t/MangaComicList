@@ -20,15 +20,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun countMe(view: View) {
-        val show_count_textview =  findViewById<TextView>(R.id.textView)
-        var count: Int = Integer.parseInt(show_count_textview.text.toString())
+        val show_count_textview =  findViewById<TextView>(R.id.textView2)
+        val count_string = show_count_textview.text.toString()
+        var count: Int = Integer.parseInt(count_string)
         count++
         show_count_textview.text = count.toString()
     }
 
     fun randomMe(view: View) {
-        val count_value = findViewById<TextView>(R.id.textView)
-        var count: Int = Integer.parseInt(count_value.text.toString())
+        val count_value = findViewById<TextView>(R.id.textView2)
+        val count_string = count_value.text.toString()
+        val count: Int = Integer.parseInt(count_string)
         val random_intent = Intent(this, Main2Activity::class.java)
         random_intent.putExtra(Main2Activity.TOTAL_COUNT, count)
         startActivity(random_intent)

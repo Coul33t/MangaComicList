@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "736921897173",
+    "firebase_url": "https://mangacomiclist.firebaseio.com",
+    "project_id": "mangacomiclist",
+    "storage_bucket": "mangacomiclist.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736921897173:android:bde887a35a6676c7",
+        "android_client_info": {
+          "package_name": "com.example.mangacomiclist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736921897173-7c04cnerjeldsiuvaucvg6c9bk5bf5tf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mangacomiclist",
+            "certificate_hash": "c8829c0f6b3fdadfb5431c6c86d17e1f3f6da085"
+          }
+        },
+        {
+          "client_id": "736921897173-naf02frkap3hamhcmem29hgtv5p3sf9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTtSETm7sDo8_W6pn2rAjURIKh9TTwxE8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736921897173-naf02frkap3hamhcmem29hgtv5p3sf9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

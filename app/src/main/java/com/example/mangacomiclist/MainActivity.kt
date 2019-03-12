@@ -5,34 +5,39 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class MainActivity : AppCompatActivity() {
 
+    var user: FirebaseUser? = null
+    lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
         setContentView(R.layout.activity_main)
     }
 
-    fun toastMe(view: View) {
-        val my_toast = Toast.makeText(this, "T O A S T E D", Toast.LENGTH_SHORT)
-        my_toast.show()
+    override fun onStart() {
+        super.onStart()
+        auth = FirebaseAuth.getInstance()
+        user = auth.currentUser
+        findViewById<TextView>(R.id.textView_user).text = getString(R.string.logged_user, user?.displayName)
     }
 
-    fun countMe(view: View) {
-        val show_count_textview =  findViewById<TextView>(R.id.textView2)
-        val count_string = show_count_textview.text.toString()
-        var count: Int = Integer.parseInt(count_string)
-        count++
-        show_count_textview.text = count.toString()
+    fun logIn(view: View) {
+        val log_in_intent = Intent(this, LogInActivity::class.java)
+        startActivity(log_in_intent)
+
     }
 
-    fun randomMe(view: View) {
-        val count_value = findViewById<TextView>(R.id.textView2)
-        val count_string = count_value.text.toString()
-        val count: Int = Integer.parseInt(count_string)
-        val random_intent = Intent(this, Main2Activity::class.java)
-        random_intent.putExtra(Main2Activity.TOTAL_COUNT, count)
-        startActivity(random_intent)
+    fun goToList(view: View) {
+
+    }
+
+    fun addElement(view: View) {
+
     }
 }
